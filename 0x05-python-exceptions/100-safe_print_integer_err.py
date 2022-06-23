@@ -5,10 +5,11 @@ import sys
 
 def safe_print_integer_err(value):
     try:
-        value = int(value)
-    except ValueError as err:
-        sys.stderr.write("Exception: {}".format(err))
-        return False
-    else:
-        print("{:d}".format(value))
+        if not value.isdigit() and isinstance(value, str):
+            return False
+        x = int(value)
+        print("{:d}".format(x))
         return True
+    except Exception as e:
+        sys.stderr.write("Exception: {}".format(e))
+        return False
