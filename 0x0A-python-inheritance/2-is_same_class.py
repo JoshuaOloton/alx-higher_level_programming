@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
-""" defines a class MyList that inherits from list """
+""" defines function that returns True if the object is exactly an instance of the specified class ; otherwise False """
 
 
 class MyList(list):
-    """ inherits from builtin class list """
     def print_sorted(self):
         self.__new_list = self[:]
         self.__new_list.sort()
