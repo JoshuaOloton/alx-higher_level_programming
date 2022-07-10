@@ -13,8 +13,10 @@ class Student:
     def to_json(self, attrs=None):
         ''' retrieves dictionary representation of instance '''
         new_dict = {}
-        if not attrs or len(attrs) == 0:
+        if not attrs:
             return self.__dict__
+        if len(attrs) == 0:
+            return new_dict
         for string in attrs:
             if string in self.__dict__.keys():
                 new_dict[string] = self.__dict__[string]
