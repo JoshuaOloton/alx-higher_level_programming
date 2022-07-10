@@ -17,4 +17,4 @@ def matrix_divided(matrix, div):
             raise TypeError('matrix must be a matrix (list of lists\
 of integers/floats')
     new_matrix = matrix[:]
-    return list(map(lambda x: list(map(lambda y: div/y, x)), new_matrix))
+    return list(map(lambda x: list(map(lambda y: y/div, x)), new_matrix))
