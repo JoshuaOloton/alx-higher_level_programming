@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-''' package __init__ file '''
+''' defines Base Class '''
 
 
 class Base:
