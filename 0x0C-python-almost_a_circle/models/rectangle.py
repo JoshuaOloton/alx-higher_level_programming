@@ -84,6 +84,28 @@ class Rectangle(Base):
             print('#' * self.width, end='')
             print()
 
+    def update(self, *args):
+        ''' updates class attributes '''
+        arg_list = [self.id, self.width, self.height, self.x, self.y]
+        pos = 0
+        for arg in args:
+            if arg:
+                if pos == 0:
+                    self.id = arg
+                    pos += 1
+                elif pos == 1:
+                    self.width = arg
+                    pos += 1
+                elif pos == 2:
+                    self.height = arg
+                    pos += 1
+                elif pos == 3:
+                    self.x = arg
+                    pos += 1
+                elif pos == 4:
+                    self.y = arg
+                    pos += 1
+
     def __str__(self):
         ''' str function '''
         return f'[{self.__class__.__name__}] ({self.id}) ' \
