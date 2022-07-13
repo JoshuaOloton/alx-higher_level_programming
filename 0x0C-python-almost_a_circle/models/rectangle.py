@@ -78,7 +78,9 @@ class Rectangle(Base):
 
     def display(self):
         ''' prints rectangle instance '''
+        print('\n' * (self.y - 1))
         for i in range(self.height):
+            print(' ' * self.x, end='')
             print('#' * self.width, end='')
             print()
 
