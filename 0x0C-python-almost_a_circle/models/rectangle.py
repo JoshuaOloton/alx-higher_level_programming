@@ -78,13 +78,14 @@ class Rectangle(Base):
 
     def display(self):
         ''' prints rectangle instance '''
-        print('\n' * (self.y - 1))
-        for i in range(self.height):
+        for i in range(self.y):
+            print()
+        for j in range(self.height):
             print(' ' * self.x, end='')
             print('#' * self.width, end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         ''' updates class attributes '''
         arg_list = [self.id, self.width, self.height, self.x, self.y]
         pos = 0
