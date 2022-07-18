@@ -87,7 +87,6 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         ''' updates class attributes '''
-        arg_list = [self.id, self.width, self.height, self.x, self.y]
         pos = 0
         for arg in args:
             if arg:
