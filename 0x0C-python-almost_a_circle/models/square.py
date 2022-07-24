@@ -47,6 +47,15 @@ class Square(Rectangle):
                 if key == 'y':
                     self.y = value
 
+    def to_dictionary(self):
+        ''' returns dictionary representation '''
+        new_dict = {}
+        new_dict['id'] = self.id
+        new_dict['x'] = self.x
+        new_dict['size'] = self.size
+        new_dict['y'] = self.y
+        return new_dict
+
     def __str__(self):
         ''' str function '''
         return f'[{self.__class__.__name__}] ({self.id}) '\
