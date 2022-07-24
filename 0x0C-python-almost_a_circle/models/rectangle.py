@@ -106,6 +106,16 @@ class Rectangle(Base):
                     self.y = arg
                     pos += 1
 
+    def to_dictionary(self):
+        ''' returns dictionary representation '''
+        new_dict = {}
+        new_dict['x'] = self.x
+        new_dict['y'] = self.y
+        new_dict['id'] = self.id
+        new_dict['height'] = self.height
+        new_dict['width'] = self.width
+        return new_dict
+
     def __str__(self):
         ''' str function '''
         return f'[{self.__class__.__name__}] ({self.id}) ' \
