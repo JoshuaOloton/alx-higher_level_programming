@@ -10,7 +10,7 @@ Base = declarative_base()
 
 class State(Base):
     """ State class inheriting from Base """
-    __tablename__ = "state"
-    id = Column(Integer, auto_increment=True, unique=True, nullable=False,
+    __tablename__ = "states"
+    id = Column(Integer, autoincrement=True, unique=True, nullable=False,
                 primary_key=True)
     name = Column(String(128), nullable=False)
