@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""  python script that lists all states with a name starting with N """
+"""  python script that takes in the name of a state as an
+argument and lists all cities of that state """
 import MySQLdb
 import sys
 
