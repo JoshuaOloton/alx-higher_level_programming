@@ -19,4 +19,4 @@ if __name__ == "__main__":
     session.add(state)
     session.commit()
 
-    print(State.id)
+    print(state.id)
