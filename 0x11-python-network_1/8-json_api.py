@@ -7,5 +7,14 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    r = requests.post(argv[1], data={'email': argv[2]})
-    print(r.text)
+    arg = ""
+    if len(argv) >= 2:
+        arg = argv[1]
+    r = requests.post("http://0.0.0.0:5000/search_user", data={'q': arg})
+    result = eval(r.text)
+    if type(result) != dict:
+        print("Not a valid JSON")
+    elif len(result) == 0:
+        print("No result")
+    else:
+        print(result)
