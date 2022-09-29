@@ -17,4 +17,4 @@ if __name__ == "__main__":
     elif len(result) == 0:
         print("No result")
     else:
-        print(result)
+        print(f"[{result.get('id')}] {result.get('name')}")
