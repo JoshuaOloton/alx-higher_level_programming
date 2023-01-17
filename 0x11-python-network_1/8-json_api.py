@@ -7,13 +7,12 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    arg = ""
-    if len(argv) >= 2:
-        arg = argv[1]
-    r = requests.post("http://0.0.0.0:5000/search_user", data={'q': arg})
+    url = "http://0.0.0.0:5000/search_user"
+    r = requests.post(url, data={'q': argv[1] if len(argv) >= 2 else ""})
+
     try:
         response = r.json()
-        if response == {}:
+        if not response:
             print("No result")
         else:
             print("[{}] {}".format(response.get("id"), response.get("name")))
